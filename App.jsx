@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import heroImg from "./zapwize-hero.jpg";
 
 /* ═══════════════════════════════════════════════════
    ZAPWIZE v4 — Editorial Premium
@@ -6,7 +7,7 @@ import { useState, useEffect, useRef } from "react";
    ═══════════════════════════════════════════════════ */
 
 const WA = "https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20ZapWize";
-const HERO_IMG = "/zapwize-hero.jpg";
+const HERO_IMG = heroImg;
 
 
 
