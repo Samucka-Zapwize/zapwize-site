@@ -6,7 +6,7 @@ import heroImg from "./zapwize-hero.jpg";
    Inspired by Assemble's refined minimalism
    ═══════════════════════════════════════════════════ */
 
-const WA = "https://wa.me/5511971986671?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20atendimento%20automatizado%20da%20ZapWize";
+const WA = "https://wa.me/5511926902008?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20atendimento%20automatizado%20da%20ZapWize";
 const HERO_IMG = heroImg;
 
 
@@ -153,11 +153,6 @@ export default function ZapWize() {
               </h1>
             </R>
             <R delay={0.16}>
-              <p className="hd" style={{ fontSize:"clamp(20px, 2.5vw, 26px)", color:"#475569", marginBottom:16, fontWeight:400, maxWidth:560 }}>
-                Quantas vendas você perde por não responder a tempo?
-              </p>
-            </R>
-            <R delay={0.18}>
               <p style={{ color:"#64748B", fontSize:18, lineHeight:1.7, marginBottom:36, maxWidth:480 }}>
                 Implantamos agentes de IA personalizados para WhatsApp que atendem, qualificam e direcionam clientes automaticamente — mesmo quando você está ocupado.
               </p>
