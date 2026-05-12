@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import heroImg from "./zapwize-hero.jpg";
 
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââ
-   ZAPWIZE v5 â Boutique Commercial Rewrite
-   Original visual identity with new commercial copy
-   âââââââââââââââââââââââââââââââââââââââââââââââââââ */
+/* ═══════════════════════════════════════════════════
+   ZAPWIZE v5 — Editorial Premium
+   Inspired by Assemble's refined minimalism
+   ═══════════════════════════════════════════════════ */
 
 const WA = "https://wa.me/5511971986671?text=Ol%C3%A1%2C%20quero%20conhecer%20o%20atendimento%20automatizado%20da%20ZapWize";
 const HERO_IMG = heroImg;
@@ -41,12 +41,12 @@ const Ic = {
 };
 
 const chatMsgs = [
-  { f:"u", t:"OlÃ¡, gostaria de agendar uma consulta", h:"14:32" },
-  { f:"b", t:"OlÃ¡! ð Sou a assistente virtual da clÃ­nica. Posso ajudar com agendamento agora mesmo.\n\nQual especialidade vocÃª precisa?", h:"14:32" },
+  { f:"u", t:"Olá, gostaria de agendar uma consulta", h:"14:32" },
+  { f:"b", t:"Olá! 😊 Sou a assistente virtual da clínica. Posso ajudar com agendamento agora mesmo.\n\nQual especialidade você precisa?", h:"14:32" },
   { f:"u", t:"Dermatologia", h:"14:33" },
-  { f:"b", t:"Ãtimo! HorÃ¡rios disponÃ­veis:\n\nð Segunda 09:00\nð TerÃ§a 14:30\nð Quarta 10:00\n\nQual prefere?", h:"14:33" },
-  { f:"u", t:"TerÃ§a Ã s 14:30", h:"14:33" },
-  { f:"b", t:"â Consulta agendada:\n\nð©º Dermatologia\nð TerÃ§a-feira, 14:30\nð ClÃ­nica SaÃºde Total\n\nEnviarei lembrete 24h antes!", h:"14:34" },
+  { f:"b", t:"Ótimo! Horários disponíveis:\n\n📅 Segunda 09:00\n📅 Terça 14:30\n📅 Quarta 10:00\n\nQual prefere?", h:"14:33" },
+  { f:"u", t:"Terça às 14:30", h:"14:33" },
+  { f:"b", t:"✅ Consulta agendada:\n\n🩺 Dermatologia\n📅 Terça-feira, 14:30\n📍 Clínica Saúde Total\n\nEnviarei lembrete 24h antes!", h:"14:34" },
 ];
 
 export default function ZapWize() {
@@ -61,7 +61,7 @@ export default function ZapWize() {
   }, [ci, cs]);
 
   const nav = [
-    { l:"SoluÃ§Ã£o", h:"#solucao" }, { l:"BenefÃ­cios", h:"#beneficios" },
+    { l:"Solução", h:"#solucao" }, { l:"Benefícios", h:"#beneficios" },
     { l:"Processo", h:"#processo" }, { l:"Investimento", h:"#planos" }, { l:"FAQ", h:"#faq" },
   ];
 
@@ -120,7 +120,7 @@ export default function ZapWize() {
         @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
       `}</style>
 
-      {/* âââ NAV âââ */}
+      {/* ═══ NAV ═══ */}
       <nav style={{ position:"fixed", top:0, left:0, right:0, zIndex:100, background:"rgba(250,251,253,0.9)", backdropFilter:"blur(16px)", borderBottom:"1px solid rgba(0,0,0,0.04)" }}>
         <div style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", height:64, display:"flex", alignItems:"center", justifyContent:"space-between" }}>
           <a href="#" style={{ textDecoration:"none", display:"flex", alignItems:"center" }}>
@@ -140,7 +140,7 @@ export default function ZapWize() {
         <a href={WA} target="_blank" rel="noopener" className="btn btn-o">Testar no WhatsApp</a>
       </div>}
 
-      {/* âââ 1. HERO âââ */}
+      {/* ═══ 1. HERO ═══ */}
       <section style={{ paddingTop:120, paddingBottom:80, background:"#FAFBFD" }}>
         <div className="hero-grid" style={{ maxWidth:1100, margin:"0 auto", padding:"0 24px", display:"grid", gridTemplateColumns:"1.1fr 0.9fr", gap:60, alignItems:"center" }}>
           <div style={{ textAlign:"left" }}>
@@ -149,24 +149,29 @@ export default function ZapWize() {
             </R>
             <R delay={0.08}>
               <h1 className="hd" style={{ fontSize:"clamp(38px, 6vw, 68px)", marginBottom:24, color:"#0F172A" }}>
-                Pare de perder clientes porque você não conseguiu <em>responder a tempo</em>.
+                Seu WhatsApp vendendo <em>24 horas</em> por dia.
               </h1>
             </R>
             <R delay={0.16}>
+              <p className="hd" style={{ fontSize:"clamp(20px, 2.5vw, 26px)", color:"#475569", marginBottom:16, fontWeight:400, maxWidth:560 }}>
+                Quantas vendas você perde por não responder a tempo?
+              </p>
+            </R>
+            <R delay={0.18}>
               <p style={{ color:"#64748B", fontSize:18, lineHeight:1.7, marginBottom:36, maxWidth:480 }}>
-                Automatize seu WhatsApp para atender, qualificar e vender â mesmo quando sua equipe nÃ£o estÃ¡ disponÃ­vel.
+                Implantamos agentes de IA personalizados para WhatsApp que atendem, qualificam e direcionam clientes automaticamente — mesmo quando você está ocupado.
               </p>
             </R>
             <R delay={0.24}>
               <div className="hero-btns" style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
-                <a href={WA} target="_blank" rel="noopener" className="btn btn-p" style={{ padding:"16px 32px" }}>Solicitar demonstraÃ§Ã£o <Ic.Arr /></a>
+                <a href={WA} target="_blank" rel="noopener" className="btn btn-p" style={{ padding:"16px 32px" }}>Solicitar demonstração <Ic.Arr /></a>
                 <a href={WA} target="_blank" rel="noopener" className="btn btn-g" style={{ padding:"16px 32px" }}><Ic.WA /> Falar no WhatsApp</a>
               </div>
             </R>
           </div>
           <R delay={0.15} d="right">
             <div style={{ background:"#0B1D3A", borderRadius:24, padding:24, display:"flex", justifyContent:"center", alignItems:"center" }}>
-              <img src={HERO_IMG} alt="ZapWize â RobÃ´ assistente de IA" className="hero-img" />
+              <img src={HERO_IMG} alt="ZapWize — Robô assistente de IA" className="hero-img" />
             </div>
           </R>
         </div>
@@ -182,25 +187,25 @@ export default function ZapWize() {
         </R>
       </section>
 
-      {/* âââ MARQUEE âââ */}
+      {/* ═══ MARQUEE ═══ */}
       <div style={{ background:"#E8891C", padding:"14px 0", overflow:"hidden" }}>
         <div style={{ display:"flex", gap:48, whiteSpace:"nowrap", animation:"marquee 24s linear infinite", color:"#fff", fontWeight:600, fontSize:14, letterSpacing:"0.01em" }}>
-          {[...Array(4)].map((_,i)=><span key={i} style={{ display:"inline-flex", alignItems:"center", gap:12 }}>Automatize Â· Atenda Â· Qualifique Â· Venda Â· Escale <span style={{ opacity:0.4 }}>â¦</span></span>)}
+          {[...Array(4)].map((_,i)=><span key={i} style={{ display:"inline-flex", alignItems:"center", gap:12 }}>Automatize · Atenda · Qualifique · Venda · Escale <span style={{ opacity:0.4 }}>✦</span></span>)}
         </div>
       </div>
 
-              {/* âââ 2. PROBLEMAS âââ */}
+      {/* ═══ 2. PROBLEMAS ═══ */}
       <section id="problemas" style={{ background:"#fff" }}>
         <div className="sec">
           <R><div className="label">O problema</div></R>
-          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:700, marginBottom:56 }}>Quantas vendas vocÃª perde por <em>nÃ£o responder</em> a tempo?</h2></R>
+          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:700, marginBottom:56 }}>Quantas vendas você perde por <em>não responder</em> a tempo?</h2></R>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(200px, 1fr))", gap:16 }}>
             {[
-              ["â±","Resposta lenta","Clientes esperam e desistem antes de vocÃª ver a mensagem."],
-              ["ð­","Leads esquecidos","Mensagens acumulam e oportunidades somem sem retorno."],
-              ["ð","Fora do horÃ¡rio","Quando sua equipe descansa, clientes procuram o concorrente."],
-              ["ð°","Equipe sobrecarregada","Seu time responde perguntas repetitivas ao invÃ©s de vender."],
-              ["ð¯","Sem padronizaÃ§Ã£o","Cada atendente responde diferente. Sua marca perde consistÃªncia."]
+              ["⏱","Resposta lenta","Clientes esperam e desistem antes de você ver a mensagem."],
+              ["📭","Leads esquecidos","Mensagens acumulam e oportunidades somem sem retorno."],
+              ["🌙","Fora do horário","Quando sua equipe descansa, clientes procuram o concorrente."],
+              ["😰","Equipe sobrecarregada","Seu time responde perguntas repetitivas ao invés de vender."],
+              ["🎯","Sem padronização","Cada atendente responde diferente. Sua marca perde consistência."]
             ].map(([e,t,d],i)=>(
               <R key={i} delay={i*0.06}>
                 <div className="card" style={{ padding:"28px 24px" }}>
@@ -214,18 +219,18 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 3. SOLUÃÃO âââ */}
+      {/* ═══ 3. SOLUÇÃO ═══ */}
       <section id="solucao">
         <div className="sec" style={{ textAlign:"center" }}>
-          <R><div className="label">A soluÃ§Ã£o</div></R>
-          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:750, margin:"0 auto 24px" }}>Um agente de IA treinado para <em>atender e vender</em> por vocÃª.</h2></R>
-          <R delay={0.12}><p style={{ color:"#64748B", fontSize:17, maxWidth:560, margin:"0 auto 48px", lineHeight:1.7 }}>NÃ£o Ã© um chatbot genÃ©rico. Ã um funcionÃ¡rio virtual implantado sob medida pela equipe ZapWize.</p></R>
+          <R><div className="label">A solução</div></R>
+          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:750, margin:"0 auto 24px" }}>Um agente de IA treinado para <em>atender e vender</em> por você.</h2></R>
+          <R delay={0.12}><p style={{ color:"#64748B", fontSize:17, maxWidth:560, margin:"0 auto 48px", lineHeight:1.7 }}>Não é um chatbot genérico. É um funcionário virtual implantado sob medida pela equipe ZapWize.</p></R>
           <R delay={0.2}>
             <div style={{ display:"flex", alignItems:"center", justifyContent:"center", flexWrap:"wrap", gap:8 }}>
               {["Mensagem recebida","IA responde","Qualifica","Agenda","Venda fechada"].map((s,i)=>(
                 <div key={i} style={{ display:"flex", alignItems:"center", gap:8 }}>
                   <div style={{ padding:"12px 20px", borderRadius:60, background:i===4?"#E8891C":"#fff", color:i===4?"#fff":"#0F172A", fontWeight:600, fontSize:14, border:i<4?"1px solid #F0F0F0":"none", whiteSpace:"nowrap" }}>{s}</div>
-                  {i<4 && <span style={{ color:"#CBD5E1", fontSize:16 }}>â</span>}
+                  {i<4 && <span style={{ color:"#CBD5E1", fontSize:16 }}>→</span>}
                 </div>
               ))}
             </div>
@@ -233,21 +238,21 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 4. BENEFÃCIOS âââ */}
+      {/* ═══ 4. BENEFÍCIOS ═══ */}
       <section id="beneficios" style={{ background:"#fff" }}>
         <div className="sec">
-          <R><div className="label">BenefÃ­cios</div></R>
-          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:600, marginBottom:56 }}>Tudo que sua equipe faz â <em>sÃ³ que melhor.</em></h2></R>
+          <R><div className="label">Benefícios</div></R>
+          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:600, marginBottom:56 }}>Um agente treinado para o <em>seu atendimento</em></h2></R>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(250px, 1fr))", gap:20 }}>
             {[
-              ["ð","Atendimento 24/7","Nunca dorme, nunca tira fÃ©rias, nunca perde a paciÃªncia."],
-              ["â¡","Respostas em <3s","Tempo de resposta abaixo de 3 segundos para qualquer mensagem."],
-              ["ð¯","QualificaÃ§Ã£o automÃ¡tica","Filtra leads quentes e frios antes de chegar ao comercial."],
-              ["ð","Agendamento inteligente","Agenda reuniÃµes e consultas direto no seu calendÃ¡rio."],
-              ["ð","Follow-up automatizado","Reengaja leads inativos com mensagens personalizadas."],
-              ["ð","Escalabilidade total","10 ou 10.000 conversas simultÃ¢neas sem contratar ninguÃ©m."],
-              ["ð°","ReduÃ§Ã£o de custos","Economia de atÃ© 70% comparado a uma equipe tradicional."],
-              ["ð","Mais conversÃµes","Aumento mÃ©dio de 40% na taxa de conversÃ£o."]
+              ["🕐","Atendimento 24/7","Nunca dorme, nunca tira férias, nunca perde a paciência."],
+              ["⚡","Respostas em <3s","Tempo de resposta abaixo de 3 segundos para qualquer mensagem."],
+              ["🎯","Qualificação automática","Filtra leads quentes e frios antes de chegar ao comercial."],
+              ["📅","Agendamento inteligente","Agenda reuniões e consultas direto no seu calendário."],
+              ["🔄","Follow-up automatizado","Reengaja leads inativos com mensagens personalizadas."],
+              ["🚀","Escalabilidade total","10 ou 10.000 conversas simultâneas sem contratar ninguém."],
+              ["💰","Redução de custos","Economia de até 70% comparado a uma equipe tradicional."],
+              ["📈","Mais conversões","Aumento médio de 40% na taxa de conversão."]
             ].map(([e,t,d],i)=>(
               <R key={i} delay={i*0.05}>
                 <div style={{ padding:"24px 0", borderBottom:"1px solid #F0F0F0" }}>
@@ -265,7 +270,7 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 5. COMO FUNCIONA âââ */}
+      {/* ═══ 5. COMO FUNCIONA ═══ */}
       <section id="processo">
         <div className="sec">
           <R><div className="label">Processo</div></R>
@@ -273,9 +278,9 @@ export default function ZapWize() {
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(230px, 1fr))", gap:24 }}>
             {[
               ["01","Mapeamento","Entendemos seus processos, perguntas frequentes e fluxo de vendas."],
-              ["02","Treinamento","Configuramos a IA com tom de voz, conhecimento e regras do seu negÃ³cio."],
-              ["03","IntegraÃ§Ã£o","Conectamos ao seu WhatsApp Business com a API oficial da Meta."],
-              ["04","OtimizaÃ§Ã£o","Acompanhamos mÃ©tricas, ajustamos respostas e melhoramos continuamente."]
+              ["02","Treinamento","Configuramos a IA com tom de voz, conhecimento e regras do seu negócio."],
+              ["03","Integração","Conectamos ao seu WhatsApp Business com a API oficial da Meta."],
+              ["04","Otimização","Acompanhamos métricas, ajustamos respostas e melhoramos continuamente."]
             ].map(([n,t,d],i)=>(
               <R key={i} delay={i*0.1}>
                 <div className="card" style={{ padding:"32px 28px" }}>
@@ -289,14 +294,14 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 6. SEGMENTOS âââ */}
+      {/* ═══ 6. SEGMENTOS ═══ */}
       <section style={{ background:"#fff" }}>
         <div className="sec" style={{ textAlign:"center" }}>
           <R><div className="label">Segmentos</div></R>
           <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,44px)", maxWidth:500, margin:"0 auto 48px" }}>Feito para <em>o seu</em> segmento.</h2></R>
           <R delay={0.12}>
             <div style={{ display:"flex", flexWrap:"wrap", gap:12, justifyContent:"center" }}>
-              {["ð©º MÃ©dicos","ð¦· Dentistas","âï¸ Advogados","ð¥ ClÃ­nicas","ð  ImobiliÃ¡rias","ð§ Engenheiros","ð Consultores","ð¢ Empresas"].map((s,i)=>(
+              {["🩺 Médicos","🦷 Dentistas","⚖️ Advogados","🏥 Clínicas","🏠 Imobiliárias","🔧 Engenheiros","📊 Consultores","🏢 Empresas"].map((s,i)=>(
                 <div key={i} style={{ padding:"12px 24px", borderRadius:60, border:"1px solid #F0F0F0", background:"#fff", fontSize:14, fontWeight:500 }}>{s}</div>
               ))}
             </div>
@@ -304,11 +309,11 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 7. DEMO âââ */}
+      {/* ═══ 7. DEMO ═══ */}
       <section>
         <div className="sec" style={{ textAlign:"center" }}>
-          <R><div className="label">DemonstraÃ§Ã£o</div></R>
-          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,44px)", maxWidth:500, margin:"0 auto 48px" }}>Veja o agente <em>em aÃ§Ã£o.</em></h2></R>
+          <R><div className="label">Demonstração</div></R>
+          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,44px)", maxWidth:500, margin:"0 auto 48px" }}>Veja o agente <em>em ação.</em></h2></R>
           <R delay={0.12}>
             <div ref={cr} style={{ maxWidth:380, margin:"0 auto", borderRadius:20, overflow:"hidden", border:"1px solid #E2E8F0", boxShadow:"0 12px 40px rgba(0,0,0,0.06)" }}>
               <div style={{ background:"#075E54", padding:"14px 18px", display:"flex", alignItems:"center", gap:10 }}>
@@ -317,13 +322,13 @@ export default function ZapWize() {
                 </div>
                 <div>
                   <div style={{ color:"#fff", fontWeight:600, fontSize:14 }}>Agente ZapWize</div>
-                  <div style={{ color:"rgba(255,255,255,0.6)", fontSize:11 }}>â online</div>
+                  <div style={{ color:"rgba(255,255,255,0.6)", fontSize:11 }}>● online</div>
                 </div>
               </div>
               <div style={{ background:"#ECE5DD", padding:14, minHeight:320, display:"flex", flexDirection:"column", gap:6 }}>
                 {chatMsgs.map((m,i)=>(
                   <div key={i} style={{ display:"flex", flexDirection:"column", alignSelf:m.f==="u"?"flex-end":"flex-start", opacity:cv.includes(i)?1:0, transform:cv.includes(i)?"translateY(0)":"translateY(10px)", transition:"all 0.5s ease", maxWidth:"80%" }}>
-                    <div className={`cb ${m.f==="b"?"cb-b":"cb-u"}`}>{m.t}<div style={{ fontSize:10, color:"#8696a0", textAlign:"right", marginTop:3 }}>{m.h} ââ</div></div>
+                    <div className={`cb ${m.f==="b"?"cb-b":"cb-u"}`}>{m.t}<div style={{ fontSize:10, color:"#8696a0", textAlign:"right", marginTop:3 }}>{m.h} ✓✓</div></div>
                   </div>
                 ))}
               </div>
@@ -332,21 +337,21 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 8. PLANOS âââ */}
+      {/* ═══ 8. PLANOS ═══ */}
       <section id="planos" style={{ background:"#fff" }}>
         <div className="sec">
           <R><div className="label">Investimento</div></R>
-          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:650, marginBottom:20 }}>Projetos de implantaÃ§Ã£o <em>sob medida.</em></h2></R>
-          <R delay={0.1}><p style={{ color:"#64748B", fontSize:16, maxWidth:520, marginBottom:56, lineHeight:1.7 }}>Cada agente Ã© criado e treinado para o seu negÃ³cio. NÃ£o vendemos software genÃ©rico.</p></R>
+          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:650, marginBottom:20 }}>Projetos de implantação <em>sob medida.</em></h2></R>
+          <R delay={0.1}><p style={{ color:"#64748B", fontSize:16, maxWidth:520, marginBottom:56, lineHeight:1.7 }}>Cada agente é criado e treinado para o seu negócio. Não vendemos software genérico.</p></R>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))", gap:20 }}>
             {[
-              { n:"Diagnóstico", tg:"Para comeÃ§ar", d:"Profissionais liberais que querem um agente para responder e agendar.", it:["1 agente personalizado","Treinamento com suas informaÃ§Ãµes","IntegraÃ§Ã£o WhatsApp Business API","AtÃ© 500 conversas/mÃªs","RelatÃ³rio mensal","Suporte por e-mail"], hl:false },
-              { n:"AvanÃ§ada", tg:"Mais vendido", d:"Empresas que precisam qualificar leads e automatizar o funil completo.", it:["AtÃ© 3 agentes especializados","QualificaÃ§Ã£o automÃ¡tica de leads","Agendamento integrado","Follow-up inteligente","Conversas ilimitadas","Dashboard analytics","Onboarding da equipe","Suporte prioritÃ¡rio"], hl:true },
-              { n:"Suporte Contínuo", tg:"Sob medida", d:"OperaÃ§Ãµes complexas com mÃºltiplos departamentos e integraÃ§Ãµes.", it:["Agentes ilimitados","IntegraÃ§Ãµes CRM/ERP","API dedicada","Multi-atendentes","SLA garantido","Gerente dedicado","Treinamento presencial","Consultoria contÃ­nua"], hl:false }
+              { n:"Diagnóstico", tg:"Para começar", d:"Profissionais liberais que querem um agente para responder e agendar.", it:["1 agente personalizado","Treinamento com suas informações","Integração WhatsApp Business API","Até 500 conversas/mês","Relatório mensal","Suporte por e-mail"], hl:false },
+              { n:"Implantação", tg:"Mais vendido", d:"Empresas que precisam qualificar leads e automatizar o funil completo.", it:["Até 3 agentes especializados","Qualificação automática de leads","Agendamento integrado","Follow-up inteligente","Conversas ilimitadas","Dashboard analytics","Onboarding da equipe","Suporte prioritário"], hl:true },
+              { n:"Suporte Contínuo", tg:"Sob medida", d:"Operações complexas com múltiplos departamentos e integrações.", it:["Agentes ilimitados","Integrações CRM/ERP","API dedicada","Multi-atendentes","SLA garantido","Gerente dedicado","Treinamento presencial","Consultoria contínua"], hl:false }
             ].map((p,i)=>(
               <R key={i} delay={i*0.1}>
                 <div className={`card ${p.hl?"plan-hl":""}`} style={{ padding:"36px 28px", position:"relative" }}>
-                  {p.hl && <div className="plan-badge">â­ {p.tg}</div>}
+                  {p.hl && <div className="plan-badge">⭐ {p.tg}</div>}
                   {!p.hl && <div style={{ fontSize:11, fontWeight:600, color:"#94A3B8", textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:8 }}>{p.tg}</div>}
                   <h3 style={{ fontSize:22, fontWeight:700, marginBottom:8 }}>{p.n}</h3>
                   <p style={{ color:"#64748B", fontSize:14, marginBottom:24, lineHeight:1.6 }}>{p.d}</p>
@@ -358,20 +363,20 @@ export default function ZapWize() {
               </R>
             ))}
           </div>
-          <R delay={0.35}><p style={{ textAlign:"center", marginTop:32, color:"#94A3B8", fontSize:13 }}>Todos os projetos incluem mapeamento, treinamento da IA, integraÃ§Ã£o WhatsApp API oficial e suporte pÃ³s-implantaÃ§Ã£o.</p></R>
+          <R delay={0.35}><p style={{ textAlign:"center", marginTop:32, color:"#94A3B8", fontSize:13 }}>Todos os projetos incluem mapeamento, treinamento da IA, integração WhatsApp API oficial e suporte pós-implantação.</p></R>
         </div>
       </section>
 
-      {/* âââ 9. DEPOIMENTOS âââ */}
+      {/* ═══ 9. DEPOIMENTOS ═══ */}
       <section>
         <div className="sec" style={{ textAlign:"center" }}>
           <R><div className="label">Para quem</div></R>
           <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,44px)", maxWidth:450, margin:"0 auto 48px" }}>Para quem o ZapWize é <em>ideal?</em></h2></R>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))", gap:20, textAlign:"left" }}>
             {[
-              { n:"Corretores", r:"Dermatologista", t:"Antes eu perdia 40% dos agendamentos por falta de resposta. Agora a IA agenda tudo automaticamente." },
-              { n:"Personal Trainers", r:"Advogado", t:"Meus clientes recebem retorno em segundos. A qualificaÃ§Ã£o automÃ¡tica me poupa 3 horas por dia." },
-              { n:"Clínicas e Consultórios", r:"CEO Â· ClÃ­nica Vida", t:"Implementamos o agente ZapWize e triplicamos nossos agendamentos em apenas 2 meses." }
+              { n:"Corretores de Imóveis", r:"Dermatologista", t:"Antes eu perdia 40% dos agendamentos por falta de resposta. Agora a IA agenda tudo automaticamente." },
+              { n:"Personal Trainers", r:"Advogado", t:"Meus clientes recebem retorno em segundos. A qualificação automática me poupa 3 horas por dia." },
+              { n:"Clínicas e Consultórios", r:"CEO · Clínica Vida", t:"Implementamos o agente ZapWize e triplicamos nossos agendamentos em apenas 2 meses." }
             ].map((t,i)=>(
               <R key={i} delay={i*0.1}>
                 <div className="card" style={{ padding:28 }}>
@@ -391,17 +396,17 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 10. FAQ âââ */}
+      {/* ═══ 10. FAQ ═══ */}
       <section id="faq" style={{ background:"#fff" }}>
         <div className="sec" style={{ maxWidth:720 }}>
           <R><div className="label" style={{ textAlign:"center" }}>FAQ</div></R>
           <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,44px)", textAlign:"center", marginBottom:48 }}>Perguntas <em>frequentes.</em></h2></R>
           {[
-            ["O que Ã© um agente de IA para WhatsApp?","Ã um assistente virtual que conversa com seus clientes via WhatsApp de forma natural, respondendo dÃºvidas, qualificando leads, agendando reuniÃµes e acompanhando oportunidades â tudo automaticamente, 24h."],
-            ["Funciona com meu WhatsApp Business?","Sim! Integramos com o WhatsApp Business API oficial da Meta, garantindo total seguranÃ§a, conformidade e continuidade no seu nÃºmero comercial."],
-            ["Posso treinar a IA com minhas informaÃ§Ãµes?","Sim! O agente Ã© 100% customizado â serviÃ§os, preÃ§os, polÃ­ticas, FAQs, tom de voz e regras de atendimento especÃ­ficas."],
-            ["A IA agenda reuniÃµes automaticamente?","Sim! Integramos com Google Calendar, Calendly e outras plataformas para agendar direto na conversa do WhatsApp."],
-            ["Quanto tempo leva para implantar?","De 5 a 10 dias Ãºteis, incluindo mapeamento, configuraÃ§Ã£o, treinamento da IA e testes."]
+            ["O que é um agente de IA para WhatsApp?","É um assistente virtual que conversa com seus clientes via WhatsApp de forma natural, respondendo dúvidas, qualificando leads, agendando reuniões e acompanhando oportunidades — tudo automaticamente, 24h."],
+            ["Funciona com meu WhatsApp Business?","Sim! Integramos com o WhatsApp Business API oficial da Meta, garantindo total segurança, conformidade e continuidade no seu número comercial."],
+            ["Posso treinar a IA com minhas informações?","Sim! O agente é 100% customizado — serviços, preços, políticas, FAQs, tom de voz e regras de atendimento específicas."],
+            ["A IA agenda reuniões automaticamente?","Sim! Integramos com Google Calendar, Calendly e outras plataformas para agendar direto na conversa do WhatsApp."],
+            ["Quanto tempo leva para implantar?","De 5 a 10 dias úteis, incluindo mapeamento, configuração, treinamento da IA e testes."]
           ].map(([q,a],i)=>(
             <R key={i} delay={i*0.04}>
               <div className="faq-i">
@@ -413,7 +418,7 @@ export default function ZapWize() {
         </div>
       </section>
 
-      {/* âââ 11. CTA FINAL âââ */}
+      {/* ═══ 11. CTA FINAL ═══ */}
       <section style={{ background:"#0F172A" }}>
         <div className="sec" style={{ textAlign:"center" }}>
           <R>
@@ -421,22 +426,22 @@ export default function ZapWize() {
           </R>
           <R delay={0.08}>
             <h2 className="hd" style={{ fontSize:"clamp(28px,5vw,48px)", color:"#fff", maxWidth:650, margin:"0 auto 16px" }}>
-              Seu prÃ³ximo cliente pode estar esperando <em>uma resposta</em> agora.
+              Seu próximo cliente pode estar esperando <em>uma resposta</em> agora.
             </h2>
           </R>
           <R delay={0.16}>
-            <p style={{ color:"rgba(255,255,255,0.45)", fontSize:17, maxWidth:480, margin:"0 auto 36px", lineHeight:1.7 }}>Automatize seu WhatsApp para atender, qualificar e vender â mesmo quando sua equipe nÃ£o estÃ¡ disponÃ­vel.</p>
+            <p style={{ color:"rgba(255,255,255,0.45)", fontSize:17, maxWidth:480, margin:"0 auto 36px", lineHeight:1.7 }}>Automatize seu WhatsApp para atender, qualificar e vender — mesmo quando sua equipe não está disponível.</p>
           </R>
           <R delay={0.24}>
             <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
-              <a href={WA} target="_blank" rel="noopener" className="btn btn-o" style={{ padding:"16px 32px" }}>Testar no WhatsAppnstraÃ§Ã£o <Ic.Arr /></a>
+              <a href={WA} target="_blank" rel="noopener" className="btn btn-o" style={{ padding:"16px 32px" }}>Testar no WhatsAppnstração <Ic.Arr /></a>
               <a href={WA} target="_blank" rel="noopener" className="btn" style={{ padding:"16px 32px", color:"rgba(255,255,255,0.6)", border:"1.5px solid rgba(255,255,255,0.15)", borderRadius:60 }}>Solicitar diagnóstico gratuito</a>
             </div>
           </R>
         </div>
       </section>
 
-      {/* âââ 12. FOOTER âââ */}
+      {/* ═══ 12. FOOTER ═══ */}
       <footer style={{ background:"#0F172A", color:"rgba(255,255,255,0.35)", padding:"0 24px 32px", borderTop:"1px solid rgba(255,255,255,0.06)" }}>
         <div style={{ maxWidth:1100, margin:"0 auto" }}>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(180px, 1fr))", gap:40, padding:"48px 0 40px" }}>
@@ -445,7 +450,7 @@ export default function ZapWize() {
               <p style={{ fontSize:13, lineHeight:1.7 }}>Automatize. Atenda. Venda. Escale.</p>
             </div>
             <div>
-              <h4 style={{ color:"rgba(255,255,255,0.6)", fontWeight:600, fontSize:13, marginBottom:14 }}>NavegaÃ§Ã£o</h4>
+              <h4 style={{ color:"rgba(255,255,255,0.6)", fontWeight:600, fontSize:13, marginBottom:14 }}>Navegação</h4>
               {nav.map(n=><a key={n.l} href={n.h} style={{ display:"block", color:"rgba(255,255,255,0.35)", textDecoration:"none", fontSize:13, marginBottom:8, transition:"color 0.2s" }} onMouseEnter={e=>e.target.style.color="#fff"} onMouseLeave={e=>e.target.style.color="rgba(255,255,255,0.35)"}>{n.l}</a>)}
             </div>
             <div>
@@ -456,11 +461,11 @@ export default function ZapWize() {
             <div>
               <h4 style={{ color:"rgba(255,255,255,0.6)", fontWeight:600, fontSize:13, marginBottom:14 }}>Legal</h4>
               <a href="#" style={{ display:"block", color:"rgba(255,255,255,0.35)", textDecoration:"none", fontSize:13, marginBottom:8 }}>Termos de Uso</a>
-              <a href="#" style={{ display:"block", color:"rgba(255,255,255,0.35)", textDecoration:"none", fontSize:13 }}>PolÃ­tica de Privacidade</a>
+              <a href="#" style={{ display:"block", color:"rgba(255,255,255,0.35)", textDecoration:"none", fontSize:13 }}>Política de Privacidade</a>
             </div>
           </div>
           <div style={{ borderTop:"1px solid rgba(255,255,255,0.06)", paddingTop:20, display:"flex", justifyContent:"space-between", flexWrap:"wrap", gap:8, fontSize:12 }}>
-            <span>Â© {new Date().getFullYear()} ZapWize. Todos os direitos reservados.</span>
+            <span>© {new Date().getFullYear()} ZapWize. Todos os direitos reservados.</span>
             <span style={{ color:"rgba(255,255,255,0.2)" }}>Atendimento automatizado com IA para WhatsApp</span>
           </div>
         </div>
@@ -470,4 +475,3 @@ export default function ZapWize() {
     </div>
   );
 }
-
