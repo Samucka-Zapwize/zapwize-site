@@ -159,7 +159,7 @@ export default function ZapWize() {
             </R>
             <R delay={0.24}>
               <div className="hero-btns" style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
-                <a href={WA} target="_blank" rel="noopener" className="btn btn-p" style={{ padding:"16px 32px" }}>Solicitar demonstração <Ic.Arr /></a>
+                <a href={WA} target="_blank" rel="noopener" className="btn btn-p" style={{ padding:"16px 32px" }}>Experimentar atendimento automatizado <Ic.Arr /></a>
                 <a href={WA} target="_blank" rel="noopener" className="btn btn-g" style={{ padding:"16px 32px" }}><Ic.WA /> Falar no WhatsApp</a>
               </div>
             </R>
@@ -185,7 +185,7 @@ export default function ZapWize() {
       {/* ═══ MARQUEE ═══ */}
       <div style={{ background:"#E8891C", padding:"14px 0", overflow:"hidden" }}>
         <div style={{ display:"flex", gap:48, whiteSpace:"nowrap", animation:"marquee 24s linear infinite", color:"#fff", fontWeight:600, fontSize:14, letterSpacing:"0.01em" }}>
-          {[...Array(4)].map((_,i)=><span key={i} style={{ display:"inline-flex", alignItems:"center", gap:12 }}>Automatize · Atenda · Qualifique · Venda · Escale <span style={{ opacity:0.4 }}>✦</span></span>)}
+          {[...Array(4)].map((_,i)=><span key={i} style={{ display:"inline-flex", alignItems:"center", gap:12 }}>Automatize · Atenda · Qualifique · Venda · Organize <span style={{ opacity:0.4 }}>✦</span></span>)}
         </div>
       </div>
 
@@ -194,7 +194,7 @@ export default function ZapWize() {
         <div className="sec">
           <R><div className="label">O problema</div></R>
           <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:700, marginBottom:56 }}>Quantas vendas você perde por <em>não responder</em> a tempo?</h2></R>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(200px, 1fr))", gap:16 }}>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:20 }}>
             {[
               ["⏱","Resposta lenta","Clientes esperam e desistem antes de você ver a mensagem."],
               ["📭","Leads esquecidos","Mensagens acumulam e oportunidades somem sem retorno."],
@@ -245,9 +245,9 @@ export default function ZapWize() {
               ["🎯","Qualificação automática","Filtra leads quentes e frios antes de chegar ao comercial."],
               ["📅","Agendamento inteligente","Agenda reuniões e consultas direto no seu calendário."],
               ["🔄","Follow-up automatizado","Reengaja leads inativos com mensagens personalizadas."],
-              ["🚀","Escalabilidade total","10 ou 10.000 conversas simultâneas sem contratar ninguém."],
-              ["💰","Redução de custos","Economia de até 70% comparado a uma equipe tradicional."],
-              ["📈","Mais conversões","Aumento médio de 40% na taxa de conversão."]
+              ["🤝","Transferência para humano","Quando a conversa precisa de uma pessoa, o agente direciona automaticamente."],
+              ["💰","Menos custo operacional","Reduz trabalho repetitivo sem precisar contratar mais gente."],
+              ["📈","Mais organização","Atendimento estruturado e profissional, sem depender da memória."]
             ].map(([e,t,d],i)=>(
               <R key={i} delay={i*0.05}>
                 <div style={{ padding:"24px 0", borderBottom:"1px solid #F0F0F0" }}>
@@ -358,24 +358,22 @@ export default function ZapWize() {
       <section>
         <div className="sec" style={{ textAlign:"center" }}>
           <R><div className="label">Para quem</div></R>
-          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,44px)", maxWidth:450, margin:"0 auto 48px" }}>Para quem o ZapWize é <em>ideal?</em></h2></R>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))", gap:20, textAlign:"left" }}>
+          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,44px)", maxWidth:500, margin:"0 auto 16px" }}>Para quem o ZapWize é <em>ideal?</em></h2></R>
+          <R delay={0.1}><p style={{ color:"#64748B", fontSize:17, maxWidth:560, margin:"0 auto 48px", lineHeight:1.7 }}>Profissionais e pequenos negócios que dependem do WhatsApp para atender e vender, mas não conseguem responder tudo a tempo.</p></R>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:20, textAlign:"left" }}>
             {[
-              { n:"Corretores de Imóveis", r:"Dermatologista", t:"Antes eu perdia 40% dos agendamentos por falta de resposta. Agora a IA agenda tudo automaticamente." },
-              { n:"Personal Trainers", r:"Advogado", t:"Meus clientes recebem retorno em segundos. A qualificação automática me poupa 3 horas por dia." },
-              { n:"Clínicas e Consultórios", r:"CEO · Clínica Vida", t:"Implementamos o agente ZapWize e triplicamos nossos agendamentos em apenas 2 meses." }
-            ].map((t,i)=>(
-              <R key={i} delay={i*0.1}>
-                <div className="card" style={{ padding:28 }}>
-                  <div style={{ display:"flex", gap:2, marginBottom:14 }}>{[...Array(5)].map((_,si)=><Ic.Str key={si} />)}</div>
-                  <p style={{ fontSize:15, lineHeight:1.7, marginBottom:20, color:"#334155" }}>"{t.t}"</p>
-                  <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-                    <div style={{ width:40, height:40, borderRadius:"50%", background:"#0F172A", display:"flex", alignItems:"center", justifyContent:"center", color:"#fff", fontWeight:700, fontSize:14 }}>{t.n[0]}</div>
-                    <div>
-                      <div style={{ fontWeight:600, fontSize:14 }}>{t.n}</div>
-                      <div style={{ color:"#94A3B8", fontSize:13 }}>{t.r}</div>
-                    </div>
-                  </div>
+              { icon:"🏠", title:"Corretores de Imóveis", desc:"Responda interessados, filtre compradores e envie informações automaticamente." },
+              { icon:"🏋️", title:"Personal Trainers", desc:"Atenda alunos interessados, explique planos e organize avaliações." },
+              { icon:"🩺", title:"Clínicas e Consultórios", desc:"Agende consultas, confirme horários e organize o fluxo de pacientes." },
+              { icon:"🔧", title:"Prestadores de Serviço", desc:"Receba pedidos, explique serviços e responda mesmo durante atendimentos." },
+              { icon:"🏢", title:"Síndicos e Administradoras", desc:"Organize solicitações, dúvidas e comunicados sem respostas manuais." },
+              { icon:"🏪", title:"Pequenos Negócios Locais", desc:"Automatize perguntas repetitivas, horários e primeiros contatos." }
+            ].map((s,i)=>(
+              <R key={i} delay={i*0.08}>
+                <div className="card" style={{ padding:"28px 24px" }}>
+                  <div style={{ fontSize:28, marginBottom:12 }}>{s.icon}</div>
+                  <h3 style={{ fontSize:17, fontWeight:600, marginBottom:8, color:"#0F172A" }}>{s.title}</h3>
+                  <p style={{ color:"#64748B", fontSize:15, lineHeight:1.6 }}>{s.desc}</p>
                 </div>
               </R>
             ))}
@@ -421,7 +419,7 @@ export default function ZapWize() {
           </R>
           <R delay={0.24}>
             <div style={{ display:"flex", gap:12, justifyContent:"center", flexWrap:"wrap" }}>
-              <a href={WA} target="_blank" rel="noopener" className="btn btn-o" style={{ padding:"16px 32px" }}>Testar no WhatsAppnstração <Ic.Arr /></a>
+              <a href={WA} target="_blank" rel="noopener" className="btn btn-o" style={{ padding:"16px 32px" }}>Testar no WhatsApp <Ic.Arr /></a>
               <a href={WA} target="_blank" rel="noopener" className="btn" style={{ padding:"16px 32px", color:"rgba(255,255,255,0.6)", border:"1.5px solid rgba(255,255,255,0.15)", borderRadius:60 }}>Solicitar diagnóstico gratuito</a>
             </div>
           </R>
@@ -434,7 +432,7 @@ export default function ZapWize() {
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(180px, 1fr))", gap:40, padding:"48px 0 40px" }}>
             <div>
               <div style={{ fontFamily:"'Sora'", fontWeight:800, fontSize:20, letterSpacing:"-0.03em", marginBottom:14 }}><span style={{ color:"#E8891C" }}>Zap</span><span style={{ color:"#fff" }}>Wize</span></div>
-              <p style={{ fontSize:13, lineHeight:1.7 }}>Automatize. Atenda. Venda. Escale.</p>
+              <p style={{ fontSize:13, lineHeight:1.7 }}>Automatize. Atenda. Qualifique. Venda.</p>
             </div>
             <div>
               <h4 style={{ color:"rgba(255,255,255,0.6)", fontWeight:600, fontSize:13, marginBottom:14 }}>Navegação</h4>
