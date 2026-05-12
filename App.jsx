@@ -341,29 +341,21 @@ export default function ZapWize() {
       <section id="planos" style={{ background:"#fff" }}>
         <div className="sec">
           <R><div className="label">Investimento</div></R>
-          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:650, marginBottom:20 }}>Projetos de implantação <em>sob medida.</em></h2></R>
-          <R delay={0.1}><p style={{ color:"#64748B", fontSize:16, maxWidth:520, marginBottom:56, lineHeight:1.7 }}>Cada agente é criado e treinado para o seu negócio. Não vendemos software genérico.</p></R>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))", gap:20 }}>
-            {[
-              { n:"Diagnóstico", tg:"Para começar", d:"Profissionais liberais que querem um agente para responder e agendar.", it:["1 agente personalizado","Treinamento com suas informações","Integração WhatsApp Business API","Até 500 conversas/mês","Relatório mensal","Suporte por e-mail"], hl:false },
-              { n:"Implantação", tg:"Mais vendido", d:"Empresas que precisam qualificar leads e automatizar o funil completo.", it:["Até 3 agentes especializados","Qualificação automática de leads","Agendamento integrado","Follow-up inteligente","Conversas ilimitadas","Dashboard analytics","Onboarding da equipe","Suporte prioritário"], hl:true },
-              { n:"Suporte Contínuo", tg:"Sob medida", d:"Operações complexas com múltiplos departamentos e integrações.", it:["Agentes ilimitados","Integrações CRM/ERP","API dedicada","Multi-atendentes","SLA garantido","Gerente dedicado","Treinamento presencial","Consultoria contínua"], hl:false }
-            ].map((p,i)=>(
-              <R key={i} delay={i*0.1}>
-                <div className={`card ${p.hl?"plan-hl":""}`} style={{ padding:"36px 28px", position:"relative" }}>
-                  {p.hl && <div className="plan-badge">⭐ {p.tg}</div>}
-                  {!p.hl && <div style={{ fontSize:11, fontWeight:600, color:"#94A3B8", textTransform:"uppercase", letterSpacing:"0.06em", marginBottom:8 }}>{p.tg}</div>}
-                  <h3 style={{ fontSize:22, fontWeight:700, marginBottom:8 }}>{p.n}</h3>
-                  <p style={{ color:"#64748B", fontSize:14, marginBottom:24, lineHeight:1.6 }}>{p.d}</p>
-                  <div style={{ display:"flex", flexDirection:"column", gap:10, marginBottom:28 }}>
-                    {p.it.map((f,fi)=><div key={fi} style={{ display:"flex", gap:10, alignItems:"center", fontSize:14 }}><Ic.Chk /> {f}</div>)}
-                  </div>
-                  <a href={WA} target="_blank" rel="noopener" className={`btn ${p.hl?"btn-o":"btn-g"}`} style={{ width:"100%", justifyContent:"center" }}>Experimentar atendimento automatizado</a>
+          <R delay={0.06}><h2 className="hd" style={{ fontSize:"clamp(32px,5vw,52px)", maxWidth:700, marginBottom:20 }}>Cada agente é criado para a <em>realidade</em> do seu negócio.</h2></R>
+          <R delay={0.12}><p style={{ color:"#64748B", fontSize:17, maxWidth:620, lineHeight:1.7, marginBottom:16 }}>Antes de apresentar uma proposta, entendemos como seu atendimento funciona hoje, quais perguntas seus clientes mais fazem, quais tarefas podem ser automatizadas e quando a conversa deve ser transferida para uma pessoa.</p></R>
+          <R delay={0.16}><p style={{ color:"#64748B", fontSize:17, maxWidth:620, lineHeight:1.7, marginBottom:48 }}>Com base nesse diagnóstico, estruturamos uma proposta compatível com o tamanho e a complexidade da sua operação.</p></R>
+          <R delay={0.2}>
+            <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(180px, 1fr))", gap:16, marginBottom:48 }}>
+              {["Diagnóstico inicial","Configuração personalizada","Treinamento do agente","Implantação assistida","Suporte e ajustes"].map((item,i) => (
+                <div key={i} className="card" style={{ padding:"20px 24px", textAlign:"center", background:"#F8FAFC", border:"1px solid #E2E8F0" }}>
+                  <span style={{ color:"#0F172A", fontWeight:600, fontSize:15 }}>{item}</span>
                 </div>
-              </R>
-            ))}
-          </div>
-          <R delay={0.35}><p style={{ textAlign:"center", marginTop:32, color:"#94A3B8", fontSize:13 }}>Todos os projetos incluem mapeamento, treinamento da IA, integração WhatsApp API oficial e suporte pós-implantação.</p></R>
+              ))}
+            </div>
+          </R>
+          <R delay={0.24}>
+            <a href={WA} target="_blank" rel="noopener" className="btn btn-p" style={{ padding:"16px 40px", fontSize:16 }}>Solicitar diagnóstico gratuito</a>
+          </R>
         </div>
       </section>
 
