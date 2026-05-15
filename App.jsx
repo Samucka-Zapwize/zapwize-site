@@ -196,8 +196,8 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
 .hd{font-family:'Sora',sans-serif;font-weight:700;line-height:1.08;letter-spacing:-0.035em}
 .hd em{font-style:normal;color:#E8891C;font-weight:800}
 
-.sec{padding:120px 24px;max-width:1100px;margin:0 auto}
-@media(max-width:768px){.sec{padding:72px 16px}}
+.sec{padding:80px 24px;max-width:1100px;margin:0 auto}
+@media(max-width:768px){.sec{padding:48px 16px}}
 
 .label{font-size:13px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#E8891C;margin-bottom:16px}
 
@@ -238,6 +238,11 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
   .hero-img{max-width:360px;margin:0 auto}
   .hero-btns{justify-content:center!important}
   .plans-grid{grid-template-columns:1fr!important}
+  .demo-grid{grid-template-columns:1fr!important}
+}
+@media(max-width:480px){
+  .btn{padding:12px 20px;font-size:14px}
+  .hero-img{max-width:280px}
 }
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
@@ -269,7 +274,7 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
       </div>}
 
       {/* ═══ 1. HERO ═══ */}
-      <section id="solucao" style={{ paddingTop:100 }}>
+      <section id="solucao" style={{ paddingTop:64 }}>
         <div className="sec hero-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:48, alignItems:"center" }}>
           <div>
             <R><p className="label">AGENTES DE IA PARA WHATSAPP</p></R>
@@ -400,7 +405,7 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
 
       {/* ═══ 6. DEMONSTRAÇÃO ═══ */}
       <section>
-        <div className="sec" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:48, alignItems:"center" }}>
+        <div className="sec demo-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:48, alignItems:"center" }}>
           <div>
             <R><p className="label">DEMONSTRAÇÃO</p></R>
             <R delay={0.04}><h2 className="hd" style={{ fontSize:"clamp(28px,4vw,40px)", marginBottom:16 }}>Veja o agente <em>em ação</em>.</h2></R>
