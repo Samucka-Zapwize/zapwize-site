@@ -237,12 +237,18 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
   .hero-grid{grid-template-columns:1fr!important;text-align:center!important}
   .hero-img{max-width:360px;margin:0 auto}
   .hero-btns{justify-content:center!important}
-  .plans-grid{grid-template-columns:1fr!important}
+  .plans-grid{grid-template-columns:1fr!important;gap:24px!important}
   .demo-grid{grid-template-columns:1fr!important}
 }
 @media(max-width:480px){
   .btn{padding:12px 20px;font-size:14px}
   .hero-img{max-width:280px}
+  .hero-section{padding-top:16px!important}
+  .hero-section .sec{padding-top:24px!important;padding-bottom:40px!important}
+  .hero-stats{gap:16px!important;margin-top:24px!important}
+  .hero-stats>div{min-width:60px}
+  .plans-grid{gap:20px!important}
+  .plans-grid .card{padding:24px!important}
 }
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
@@ -274,7 +280,7 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
       </div>}
 
       {/* ═══ 1. HERO ═══ */}
-      <section id="solucao" style={{ paddingTop:64 }}>
+      <section id="solucao" className="hero-section" style={{ paddingTop:64 }}>
         <div className="sec hero-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:48, alignItems:"center" }}>
           <div>
             <R><p className="label">AGENTES DE IA PARA WHATSAPP</p></R>
@@ -287,7 +293,7 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
               </div>
             </R>
             <R delay={0.24}>
-              <div style={{ display:"flex", gap:32, marginTop:40, flexWrap:"wrap" }}>
+              <div className="hero-stats" style={{ display:"flex", gap:32, marginTop:40, flexWrap:"wrap" }}>
                 {[["24/7","Sempre disponível"],["<3s","Tempo de resposta"],["100%","Personalizado"],["Humano","Quando necessário"]].map(([v,l])=>(
                   <div key={v} style={{ textAlign:"center" }}>
                     <div style={{ fontFamily:"'Sora'", fontWeight:800, fontSize:22, color:"#E8891C" }}>{v}</div>
@@ -303,8 +309,8 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
 
       {/* ═══ MARQUEE ═══ */}
       <div style={{ overflow:"hidden", background:"#0F172A", padding:"14px 0" }}>
-        <div style={{ display:"flex", animation:"marquee 20s linear infinite", width:"max-content" }}>
-          {[...Array(8)].map((_,i)=><span key={i} style={{ color:"rgba(255,255,255,0.5)", fontSize:13, fontWeight:600, letterSpacing:"0.05em", whiteSpace:"nowrap", marginRight:24 }}>Automatize · Atenda · Qualifique · Venda · Organize <span style={{ color:"#E8891C" }}>✦</span></span>)}
+        <div style={{ display:"flex", animation:"marquee 40s linear infinite", width:"max-content" }}>
+          {[...Array(6)].map((_,i)=><span key={i} style={{ color:"rgba(255,255,255,0.5)", fontSize:13, fontWeight:600, letterSpacing:"0.05em", whiteSpace:"nowrap", marginRight:60 }}>Automatize · Atenda · Qualifique · Venda · Organize <span style={{ color:"#E8891C" }}>✦</span></span>)}
         </div>
       </div>
 
