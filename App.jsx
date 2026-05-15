@@ -235,20 +235,29 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
 .hero-img{width:100%;max-width:520px;height:auto;border-radius:20px}
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr!important;text-align:center!important}
-  .hero-img{max-width:360px;margin:0 auto}
+  .hero-img{max-width:320px;margin:0 auto}
   .hero-btns{justify-content:center!important}
-  .plans-grid{grid-template-columns:1fr!important;gap:24px!important}
+  .plans-grid{grid-template-columns:1fr!important;gap:28px!important}
   .demo-grid{grid-template-columns:1fr!important}
 }
 @media(max-width:480px){
+  .hero-section{padding-top:56px!important}
+  .hero-section .sec{padding-top:32px!important;padding-bottom:24px!important}
+  .hero-section .label{font-size:11px!important;margin-bottom:10px!important}
+  .hero-section .hd{font-size:clamp(28px,8vw,36px)!important;margin-bottom:14px!important}
+  .hero-subtitle{font-size:15px!important;margin-bottom:20px!important;line-height:1.6!important}
+  .hero-btns{gap:10px!important}
+  .hero-btns .btn{padding:12px 24px!important;font-size:14px!important;width:100%!important;justify-content:center!important}
+  .hero-stats{display:grid!important;grid-template-columns:1fr 1fr 1fr 1fr!important;gap:8px!important;margin-top:20px!important}
+  .hero-stats>div .stat-val{font-size:18px!important}
+  .hero-stats>div .stat-label{font-size:10px!important}
+  .hero-img{max-width:260px;margin-top:8px!important}
+  .sec{padding:40px 16px!important}
+  .plans-grid{gap:24px!important}
+  .plans-grid .card{padding:24px 20px!important}
+  .plan-badge{font-size:10px!important;padding:3px 12px!important}
   .btn{padding:12px 20px;font-size:14px}
-  .hero-img{max-width:280px}
-  .hero-section{padding-top:16px!important}
-  .hero-section .sec{padding-top:24px!important;padding-bottom:40px!important}
-  .hero-stats{gap:16px!important;margin-top:24px!important}
-  .hero-stats>div{min-width:60px}
-  .plans-grid{gap:20px!important}
-  .plans-grid .card{padding:24px!important}
+  .faq-q{font-size:15px!important;padding:20px 0!important}
 }
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
@@ -285,7 +294,7 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
           <div>
             <R><p className="label">AGENTES DE IA PARA WHATSAPP</p></R>
             <R delay={0.06}><h1 className="hd" style={{ fontSize:"clamp(36px,5.5vw,56px)", marginBottom:20 }}>Seu WhatsApp <em>vendendo</em> 24 horas por dia.</h1></R>
-            <R delay={0.12}><p style={{ color:"#64748B", fontSize:17, lineHeight:1.7, maxWidth:480, marginBottom:32 }}>Implantamos agentes de IA que respondem seus clientes em menos de 3 segundos, qualificam leads e agendam reuniões automaticamente — 24 horas por dia, 7 dias por semana.</p></R>
+            <R delay={0.12}><p className="hero-subtitle" style={{ color:"#64748B", fontSize:17, lineHeight:1.7, maxWidth:480, marginBottom:32 }}>Implantamos agentes de IA que respondem seus clientes em menos de 3 segundos, qualificam leads e agendam reuniões automaticamente — 24 horas por dia, 7 dias por semana.</p></R>
             <R delay={0.18}>
               <div className="hero-btns" style={{ display:"flex", gap:12, flexWrap:"wrap" }}>
                 <a href={WA_DEFAULT} target="_blank" rel="noopener" className="btn btn-o">Experimentar atendimento automatizado <Ic.Arr /></a>
@@ -296,8 +305,8 @@ html{scroll-behavior:smooth} body{margin:0;overflow-x:hidden}
               <div className="hero-stats" style={{ display:"flex", gap:32, marginTop:40, flexWrap:"wrap" }}>
                 {[["24/7","Sempre disponível"],["<3s","Tempo de resposta"],["100%","Personalizado"],["Humano","Quando necessário"]].map(([v,l])=>(
                   <div key={v} style={{ textAlign:"center" }}>
-                    <div style={{ fontFamily:"'Sora'", fontWeight:800, fontSize:22, color:"#E8891C" }}>{v}</div>
-                    <div style={{ fontSize:12, color:"#94A3B8", marginTop:2 }}>{l}</div>
+                    <div className="stat-val" style={{ fontFamily:"'Sora'", fontWeight:800, fontSize:22, color:"#E8891C" }}>{v}</div>
+                    <div className="stat-label" style={{ fontSize:12, color:"#94A3B8", marginTop:2 }}>{l}</div>
                   </div>
                 ))}
               </div>
